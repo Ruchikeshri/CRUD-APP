@@ -1,0 +1,16 @@
+<div class="container">
+   <div class="row">
+     <div *ngFor="let std of StdList">
+    <div class="card m-3">
+      <div class="card-body alert alert-primary">
+        <h5 class="card-title">Std ID : {{std.id}}</h5>
+        <p class="card-text">Std Name: {{std.name}}</p>
+        <p class="card-text">Std email: {{std.email}}</p>
+        <button class="btn"><a routerLink="/update" [queryParams]="{id: std.id}"><i class="fa fa-edit"></i></a></button>
+        <button class="btn" (click)="deleteRecord(std.id)"> <i class="fa fa-trash" ></i></button>
+      </div>
+    </div>
+   </div>
+  </div>
+</div>
+
